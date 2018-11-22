@@ -1,0 +1,169 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-light bg">
+        <div class="title">
+          <h1 >Select currency to exhange</h1>
+        </div>      
+      <div class="group">
+       
+        <select  onchange="Changed(this)" class="select" id="selectCountries">
+          <option name="USD" class="option">USD</option>
+          <option name="EUR" class="option">EUR</option>
+          <option name="RUB" class="option">RUB</option>
+          <option name="GBR" class="option">GBR</option>
+        </select>
+        
+      </div>
+    </nav>
+
+    <div class="block ">
+      <div class="block_item b_it_ge">
+        <div class="log">
+          <p class="lg_name">Ethereum</p>
+          <img class="Eth_img" src="img/Eth.png">
+        </div>
+        <div class="price_list">
+          <div class="d1">
+            <p class="common_p">Price:</p>
+            <p class="common_pc">Percent change</p>
+            <p class="common_i">Hour change</p>
+            <p class="common_i">Day change</p>
+            <p class="common_i">Week change</p>
+            <p class="common_i">Month change</p>
+          </div>
+          <div class="d2">
+            <div class="the_ tip">
+              <p class="common_p price_E">$0</p>
+              <p class="Blok_switch">
+                <label class="switch">
+                  <input type="checkbox" checked="checked" id='chek1'   onchange = 'showOrHide("chek1", "pier_blok1", "val_blok1")'>
+                  <span class="slider round"></span>
+                </label>
+              </p>
+            </div>            
+            <div id="pier_blok1" style="display: none">
+              <p class="itme i_e_H">0%</p>
+              <p class="itme i_e_D">0%</p>
+              <p class="itme i_e_W">0%</p>
+              <p class="itme i_e_M">0%</p>
+            </div>
+            <div id="val_blok1">
+              <p class="itme i_e_H_money">0$</p>
+              <p class="itme i_e_D_money">0$</p>
+              <p class="itme i_e_W_money">0$</p>
+              <p class="itme i_e_M_money">0$</p>
+            </div>              
+          </div>     
+        </div>
+      </div>
+      <div class="block_item b_it_gr">
+        <div class="log">
+          <p class="lg_name">Litecoin</p>
+          <img class="img_lt"src="img/im2.png">
+        </div>
+        <div class="price_list litec">
+          <div class="d1">
+            <p class="common_p">Price:</p>
+            <p class="common_pc">Percent change</p>
+            <p class="common_i">Hour change</p>
+            <p class="common_i">Day change</p>
+            <p class="common_i">Week change</p>
+            <p class="common_i">Month change</p>
+          </div>
+          <div class="d2">
+            <div class="the_ tip">
+              <p class="common_p price_L">$0</p>
+              <p class="Blok_switch">
+                <label class="switch">
+                  <input type="checkbox" checked="checked" id='chek2'   onchange = 'showOrHide("chek2", "pier_blok2", "val_blok2")'>
+                  <span class="slider round"></span>
+                </label>
+              </p>
+            </div>            
+            <div id="pier_blok2" style="display: none">
+              <p class="itme i_l_H">0%</p>
+              <p class="itme i_l_D">0%</p>
+              <p class="itme i_l_W">0%</p>
+              <p class="itme i_l_M">0%</p>
+            </div> 
+            <div id="val_blok2">
+              <p class="itme i_l_H_money">0$</p>
+              <p class="itme i_l_D_money">0$</p>
+              <p class="itme i_l_W_money">0$</p>
+              <p class="itme i_l_M_money">0$</p>
+            </div>           
+          </div>     
+        </div>
+      </div>
+
+      <div class="block_item b_it_br roll">
+        <div class="log">
+          <p class="lg_name">Bitcoin</p>
+          <img class="img_bit" src="img/im3.png">
+        </div>
+        <div class="price_list bitc">
+          <div class="d1">           
+              <p class="common_p">Price:</p>
+              <p class="common_pc">Percent change</p>           
+              <p class="common_i">Hour change</p>
+              <p class="common_i">Day change</p>
+              <p class="common_i">Week change</p>
+              <p class="common_i">Month change</p>          
+          </div>
+          <div class="d2">
+            <div class="the_ tip">
+              <p class="common_p price_B">$0</p>
+              <p class="Blok_switch">
+              <label class="switch">
+                <input type="checkbox"  id='chek3'   onchange = 'showOrHide("chek3", "pier_blok3", "val_blok3")'>
+                <span class="slider round"></span>
+              </label>
+            </p>
+            </div>
+            <div id="pier_blok3" style="display: none">
+              <p class="itme i_b_H">0%</p>
+              <p class="itme i_b_D">0%</p>
+              <p class="itme i_b_W">0%</p>
+              <p class="itme i_b_M">0%</p>
+            </div>
+            <div id="val_blok3">
+              <p class="itme i_b_H_money">0$</p>
+              <p class="itme i_b_D_money">0$</p>
+              <p class="itme i_b_W_money">0$</p>
+              <p class="itme i_b_M_money">0$</p>
+            </div>
+          </div>          
+        </div>
+      </div>
+
+    </div>
+   
+    </div>
+
+    
+
+
+
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+     <script src="js/script.js"></script>
+  </body>
+</html>
